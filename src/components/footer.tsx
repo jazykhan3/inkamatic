@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
   return (
     <div className="bg-[#151515]">
       <div className="w-4/5 mx-auto text-white">
-        <div className="py-20 flex justify-between ">
+        <div className="py-20 flex justify-between flex-wrap">
           {footerData.columns.map((column, index) => (
             <FooterColumn key={index} {...column} />
           ))}

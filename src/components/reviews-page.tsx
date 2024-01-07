@@ -1,6 +1,4 @@
-"use client";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import React from "react";
 
 interface Review {
@@ -28,8 +26,7 @@ const ReviewCard: React.FC<Review> = ({ imageSrc, date, title, content }) => (
   </div>
 );
 
-const PopularReviews: React.FC = () => {
-  const router = useRouter();
+const ReviewsPage: React.FC = () => {
   const reviews: Review[] = [
     {
       imageSrc: "/review1.png",
@@ -64,12 +61,32 @@ const PopularReviews: React.FC = () => {
         title: "Shares Review: The Best Social Investing App Will Change Your World",
         content: "Every so often, an app, idea, or website comes along that has the potential to revolutionize an industry. Facebook, for example...",
       },
+      {
+        imageSrc: "/review1.png",
+        date: "Inkmattic - February 10, 2022",
+        title: "M1 Finance vs Webull: Which Finance Platform Is the Best?",
+        content: "Stock brokerage firms have been undergoing a quiet revolution...",
+      },
+      {
+        imageSrc: "/review2.png",
+        date: "Inkmattic - October 24, 2022",
+        title: "Freetrade SIPPs | Everything You Need To Know!",
+        content: "There have been a lot of rumours on the internet that the top commission-free brokerage platforms in the UK are planning to offer SIPPs....",
+      },
+      {
+          imageSrc: "/review3.png",
+          date: "Inkmattic - May 14, 2022",
+          title: "Is the eToro CopyTrader tool too good to be true?",
+          content: "If you’ve ever searched the term ‘trading’ on Google or YouTube, you’ll probably have seen eToro’s eye-catching lime-green...",
+        }
+      
   ];
 
   return (
     <div className="w-4/5 mx-auto flex items-center flex-col mb-20">
       <p className="text-center text-[#253146] text-4xl font-medium">
-        Popular Reviews
+      Featured Trading
+Platform
       </p>
 
       <div className="my-10 flex flex-wrap gap-[30px] justify-between">
@@ -80,12 +97,11 @@ const PopularReviews: React.FC = () => {
       <button
           style={{ borderRadius: 50 }}
           className="text-white border-radius-50 py-3 px-8 bg-[#253146] "
-          onClick={()=>{router.push('/reviews-page')}}
         >
-          View More
+          Read More
         </button>
     </div>
   );
 };
 
-export default PopularReviews;
+export default ReviewsPage;

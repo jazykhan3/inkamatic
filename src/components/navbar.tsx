@@ -1,9 +1,10 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useReducer } from "react";
 import { DownOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { Dropdown, Space } from 'antd';
+import { useRouter } from "next/navigation";
 
 class MenuItem {
   label: React.ReactNode;
@@ -16,6 +17,7 @@ class MenuItem {
 }
 
 function Navbar() {
+  const router = useRouter();
   const items: MenuProps['items'] = [
     new MenuItem(<a href="https://www.antgroup.com">1st menu item</a>, '0'),
     new MenuItem(<a href="https://www.aliyun.com">2nd menu item</a>, '1'),
@@ -35,11 +37,12 @@ function Navbar() {
       <div>
         <Image
           src={"/logo.png"}
-          className="dark:invert"
+          className="dark:invert cursor-pointer"
           width={178}
           height={30}
           priority
           alt="logo"
+          onClick={()=>{router.push('/')}}
         />
       </div>
       <div>

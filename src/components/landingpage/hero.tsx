@@ -3,7 +3,7 @@ import "./index.css";
 function Hero() {
   return (
     <div className="hero-section">
-      <div className="w-4/5 flex flex-col gap-[2rem] items-start justify-start  mx-auto pb-[4rem] pt-[10.25rem]">
+      <div className="w-4/5 flex flex-col gap-[2rem] items-start justify-start  mx-auto pb-[4rem] pt-[14.25rem]">
         <p className="w-[45rem] text-white font-medium text-5xl">
           Wise Account Review: Is This the Premier Multi-Currency Solution?
         </p>

@@ -27,7 +27,7 @@ function FeaturesSection() {
   ];
 
   return (
-    <div className="w-4/5 mx-auto my-[7rem] flex justify-between">
+    <div className="w-4/5 mx-auto my-[7rem] flex justify-between flex-wrap">
       {features.map((feature, index) => (
         <FeatureItem key={index} {...feature} />
       ))}
