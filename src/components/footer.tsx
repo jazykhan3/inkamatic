@@ -12,9 +12,9 @@ interface FooterProps {
 
 const FooterColumn: React.FC<FooterItem> = ({ title, items }) => (
   <ul className="flex flex-col gap-[1rem]">
-    <li className="font-bold text-lg">{title}</li>
+    <li className="font-bold text-base md:text-lg">{title}</li>
     {items.map((item, index) => (
-      <li key={index} className=" cursor-pointer text-base font-normal text-[#FFFFFFBF]">
+      <li key={index} className=" cursor-pointer text-sm md:text-base font-normal text-[#FFFFFFBF]">
         {item}
       </li>
     ))}
@@ -45,8 +45,8 @@ const Footer: React.FC = () => {
 
   return (
     <div className="bg-[#151515]">
-      <div className="w-4/5 mx-auto text-white">
-        <div className="py-20 flex justify-between flex-wrap">
+      <div className="w-5/5 p-3 md:p-0 md:w-4/5 mx-auto text-white">
+        <div className="py-20 flex gap-[40px] md:gap-[0px] justify-between flex-wrap">
           {footerData.columns.map((column, index) => (
             <FooterColumn key={index} {...column} />
           ))}

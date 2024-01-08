@@ -6,3 +6,8 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.searchBar{
+    .ant-input{
+        background:#F4F4F6 ;
+    }
+}

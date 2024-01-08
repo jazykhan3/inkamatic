@@ -120,12 +120,12 @@ const ReviewsPage: React.FC = () => {
 
   return (
     <div className="w-4/5 mx-auto flex items-center flex-col mb-20">
-      <p className="text-center text-[#253146] text-4xl font-medium mt-14">
+      <p className="text-center text-[#253146] text-4xl font-medium mt-14 mb-4 md:mb-0 ">
         Featured Trading Platform
       </p>
       <div className="flex justify-between items-center w-full">
         <p className="font-normal text-sm text-[#253146BF]">Total 35 Reviews</p>{" "}
-        <span className="flex iems-center gap-[10px] text-[#253146BF] text-sm font-normal">
+        <span className="flex items-center gap-[10px] text-[#253146BF] text-sm font-normal">
           Sort By:
           <Dropdown menu={{}} trigger={["click"]}>
             <a onClick={(e) => e.preventDefault()}>

@@ -86,7 +86,7 @@ const ReviewsPage: React.FC = () => {
 
   return (
     <div className="w-4/5 mx-auto flex items-center flex-col mb-20">
-      <p className="text-center text-[#253146] text-4xl font-medium">
+      <p className="text-center text-[#253146] mb-4 md:mb-0 text-4xl font-medium">
       Featured Trading
 Platform
       </p>
