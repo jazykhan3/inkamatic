@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 interface Review {
@@ -6,9 +7,10 @@ interface Review {
   date: string;
   title: string;
   content: string;
+  onClick?: () => void;
 }
-
-const ReviewCard: React.FC<Review> = ({ imageSrc, date, title, content }) => (
+const router = useRouter();
+const ReviewCard: React.FC<Review> = ({ imageSrc, date, title, content ,onClick}) => (
   <div className="rounded-2xl w-[25.625rem] border border-solid border-[#25314640] p-3">
     <Image alt="" src={imageSrc} height={280} width={400} />
     <p className="text-[#253146CC] text-base font-light italic my-3">
@@ -20,7 +22,7 @@ const ReviewCard: React.FC<Review> = ({ imageSrc, date, title, content }) => (
     <p className="text-[#253146CC] text-base font-normal my-3">
       {content}
     </p>
-    <p className="text-[#253146] font-bold text-base underline my-3 cursor-pointer">
+    <p className="text-[#253146] font-bold text-base underline my-3 cursor-pointer" onClick={onClick}>
       Read More
     </p>
   </div>
@@ -91,7 +93,7 @@ Platform
 
       <div className="my-10 flex flex-wrap gap-[30px] justify-between">
         {reviews.map((review, index) => (
-          <ReviewCard key={index} {...review} />
+          <ReviewCard key={index} {...review} onClick={()=>{router.push('/review-detail-page')}} />
         ))}
       </div>
       <button

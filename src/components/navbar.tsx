@@ -47,7 +47,7 @@ function Navbar() {
       </div>
       <div>
         <ul className="flex items-center gap-[30px] text-[#253146BF]">
-          <li className="text-[#253146BF] text-base">Home</li>
+          <li className="text-[#253146BF] text-base cursor-pointer">Home</li>
           {dropdowns.map((dropdown, index) => (
             <li key={index}>
               <Dropdown menu={{ items }} trigger={['click']}>
