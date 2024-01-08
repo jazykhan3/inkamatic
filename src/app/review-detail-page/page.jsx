@@ -20,7 +20,7 @@ function ReviewDetailPage() {
             Investing Platforms
           </span>
         </span>
-        <span className="w-full flex gap-[1.5rem] my-5">
+        <span className="w-full flex items-center gap-[1.5rem] my-5">
           <Image src={"/profileIcon.png"} width={50} height={50} alt="" />
           <span className="flex flex-col gap-[2px]">
             <p className="font-normal text-lg">Gert Svaiko</p>

@@ -7,7 +7,7 @@
     background-size: cover;
 }
 .searchBar{
-    :global(.ant-input){
-        background:#F4F4F6 ;
+    .ant-input{
+        background:#F4F4F6 !important;
     }
 }

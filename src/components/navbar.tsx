@@ -5,6 +5,7 @@ import { DownOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { Dropdown, Input, Space } from 'antd';
 import { useRouter } from "next/navigation";
+import './index.css'
 
 class MenuItem {
   label: React.ReactNode;
@@ -49,7 +50,7 @@ function Navbar() {
           alt="logo"
           onClick={()=>{router.push('/')}}
         />
-            <Input className="w-[20rem] rounded-full h-11 bg-[#2531460D] searchBar" placeholder="Search" prefix={<Image src={'/search.png'} height={20} width={20} alt=""/>} />
+            <Input className="hidden lg:flex w-[20rem] rounded-full h-11 bg-[#2531460D] searchBar" placeholder="Search" prefix={<Image src={'/search.png'} height={20} width={20} alt=""/>} />
 
       </div>
       <div>
