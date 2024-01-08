@@ -9,7 +9,6 @@ interface Review {
   content: string;
   onClick?: () => void;
 }
-const router = useRouter();
 const ReviewCard: React.FC<Review> = ({ imageSrc, date, title, content ,onClick}) => (
   <div className="rounded-2xl w-[25.625rem] border border-solid border-[#25314640] p-3">
     <Image alt="" src={imageSrc} height={280} width={400} />
@@ -29,6 +28,7 @@ const ReviewCard: React.FC<Review> = ({ imageSrc, date, title, content ,onClick}
 );
 
 const ReviewsPage: React.FC = () => {
+  const router = useRouter();
   const reviews: Review[] = [
     {
       imageSrc: "/review1.png",
