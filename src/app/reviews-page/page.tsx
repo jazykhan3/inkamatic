@@ -138,7 +138,7 @@ const ReviewsPage: React.FC = () => {
         </span>
       </div>
 
-      <div className="my-10 flex flex-wrap gap-[30px] justify-between">
+      <div className="w-full my-10 flex flex-wrap gap-[30px] justify-between">
         {reviews.map((review, index) => (
           <ReviewCard key={index} {...review} onClick={()=>{router.push('/review-detail-page')}} />
           ))}

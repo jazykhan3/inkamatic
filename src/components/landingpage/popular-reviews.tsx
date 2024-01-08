@@ -11,7 +11,7 @@ interface Review {
   onClick?: () => void;
 }
 const ReviewCard: React.FC<Review> = ({ imageSrc, date, title, content ,onClick}) => (
-  <div className="rounded-2xl w-[25.625rem] border border-solid border-[#25314640] p-3">
+  <div className="rounded-2xl md:w-[25.625rem] border border-solid border-[#25314640] p-3">
     <Image alt="" src={imageSrc} height={280} width={400} />
     <p className="text-[#253146CC] text-base font-light italic my-3">
       {date}
