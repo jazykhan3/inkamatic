@@ -68,7 +68,7 @@ function Navbar() {
             <li key={index}>
               <Dropdown menu={{ items }} trigger={['click']}>
                 <a onClick={(e) => e.preventDefault()}>
-                  <Space className="text-[#253146BF] text-base">
+                  <Space className="text-[#253146BF] text-base cursor-pointer">
                     {dropdown.text}
                     {dropdown.icon}
                   </Space>
@@ -85,7 +85,7 @@ function Navbar() {
             <li key={index}>
               <Dropdown menu={{ items }} trigger={['click']}>
                 <a onClick={(e) => e.preventDefault()}>
-                  <Space className="text-[#253146BF] text-base">
+                  <Space className="text-[#253146BF] text-base cursor-pointer">
                     {dropdown.text}
                     {dropdown.icon}
                   </Space>
