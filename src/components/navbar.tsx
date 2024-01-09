@@ -43,7 +43,7 @@ function Navbar() {
       <div className="flex items-start gap-[1.5rem]">
         <Image
           src={"/logo.png"}
-          className="dark:invert cursor-pointer"
+          className=" cursor-pointer"
           width={178}
           height={30}
           priority
