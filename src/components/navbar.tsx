@@ -39,7 +39,7 @@ function Navbar() {
   ];
 
   return (
-    <div className="m-auto w-4/5 h-[100px] flex items-center border-b border-[#25314633] justify-between">
+    <div className="m-auto w-11/12 h-[100px] flex items-center border-b border-[#25314633] justify-between">
       <div className="flex items-start gap-[1.5rem]">
         <Image
           src={"/logo.png"}

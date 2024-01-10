@@ -27,7 +27,7 @@ function FeaturesSection() {
   ];
 
   return (
-    <div className="w-5/5 md:w-4/5 px-4 md:px-0 mx-auto my-[7rem] gap-[20px] md:gap-[0px] flex justify-between flex-wrap">
+    <div className="w-5/5 md:w-11/12 px-4 md:px-0 mx-auto my-[7rem] gap-[20px] md:gap-[0px] flex justify-between flex-wrap">
       {features.map((feature, index) => (
         <FeatureItem key={index} {...feature} />
       ))}

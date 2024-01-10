@@ -11,7 +11,7 @@ interface Review {
   onClick?: () => void;
 }
 const ReviewCard: React.FC<Review> = ({ imageSrc, date, title, content ,onClick}) => (
-  <div className="rounded-2xl md:w-[24.625rem] border border-solid border-[#25314640] p-3">
+  <div className="rounded-2xl md:w-[20.625rem] border border-solid border-[#25314640] p-3">
     <Image alt="" src={imageSrc} height={280} width={400} />
     <p className="text-[#253146CC] text-base font-light italic my-3">
       {date}
@@ -67,7 +67,7 @@ const PopularReviews: React.FC = () => {
   ];
 
   return (
-    <div className="w-4/5 mx-auto flex items-center flex-col mb-20">
+    <div className="w-11/12 mx-auto flex items-center flex-col mb-20">
       <p className="text-center text-[#253146] text-4xl font-medium">
         Popular Reviews
       </p>
