@@ -16,7 +16,7 @@ interface Review {
 }
 
 const ReviewCard: React.FC<Review> = ({ imageSrc, date, title, content ,onClick}) => (
-  <div className="rounded-2xl w-[25.625rem] border border-solid border-[#25314640] p-3">
+  <div className="rounded-2xl md:w-[20.625rem] border border-solid border-[#25314640] p-3">
     <Image alt="" src={imageSrc} height={280} width={400} />
     <p className="text-[#253146CC] text-base font-light italic my-3">{date}</p>
     <p className="text-[#253146] font-medium text-xl">{title}</p>
@@ -119,7 +119,7 @@ const ReviewsPage: React.FC = () => {
   };
 
   return (
-    <div className="w-4/5 mx-auto flex items-center flex-col mb-20">
+    <div className="w-11/12 mx-auto flex items-center flex-col mb-20">
       <p className="text-center text-[#253146] text-4xl font-medium mt-14 mb-4 md:mb-0 ">
         Featured Trading Platform
       </p>
