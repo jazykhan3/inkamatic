@@ -2,6 +2,20 @@ import Image from "next/image";
 import React from "react";
 
 function ReviewDetailPage() {
+  const data = [
+    { title: "Freetrade Referral", content: "Click here to sign up", bg: "#2531461A" },
+    { title: "Sign-up Bonus", content: "£10 Free Stock", bg: "" },
+    { title: "Sign up Terms", content: "You’re only eligible if you’re a new Freetrade customer. Fund your account with £50 or more within 30 days.", bg: "#2531461A" },
+    { title: "Last Validated", content: "October 2022", bg: "" },
+  ];
+  
+  const images = [
+    '/articleFooterIcon1.png',
+    '/articleFooterIcon2.png',
+    '/articleFooterIcon3.png',
+    '/articleFooterIcon4.png',
+    '/articleFooterIcon5.png',
+  ];
   return (
     <div className="w-5/5 md:w-4/5 mx-auto  flex flex-col md:flex-row gap-[40px] my-10">
       <div className="w-5/5 md:w-4/5 border border-solid border-[#25314640] p-3 rounded-2xl flex items-center justify-center flex-col">
@@ -434,7 +448,22 @@ function ReviewDetailPage() {
         </p>
         <p className="w-full md:text-xl  text-lg font-normal w-full mb-4">
           Freetrade Sign-up Offer
-        </p></div>
+        </p>
+        <div className="flex w-full gap-[36px] bg-[#2531461A] py-3 px-5"  ><p className="md:text-base text-sm font-medium text-[#253146] w-[9rem]">Freetrade Referral</p><p className="md:text-base text-sm font-normal underline #253146">Click here to sign up</p></div>
+          <div className="flex w-full gap-[36px]  py-3 px-5"  ><p className="md:text-base font-medium text-sm text-[#253146] w-[9rem]">Sign-up Bonus</p><p className="md:text-base text-sm font-normal  text-[#253146CC]">£10 Free Stock</p></div>
+          <div className="flex w-full gap-[36px] bg-[#2531461A] py-3 px-5"  ><p className="md:text-base text-sm font-medium text-[#253146] min-w-[9rem]">Sign up Terms</p><p className="md:text-base text-sm font-normal text-[#253146CC]">You’re only eligible if you’re a new Freetrade customer.Fund your account with £50 or more within 30 days.</p></div>
+          <div className="flex w-full gap-[36px]  py-3 px-5"  ><p className="md:text-base font-medium text-sm text-[#253146] w-[9rem]">Last Validated</p><p className="md:text-base text-sm font-normal text-[#253146CC]">October 2022</p></div>
+          <span className="flex items-center gap-[20px] w-full mt-[3rem] pl-5">
+        <p className="text-base font-medium text-[#253146]">Share:-</p>
+        <span className="flex gap-[20px] items-center w-full">
+          {images.map((image, index) => (
+            <Image key={index} src={image} width={20} height={20} alt={`icon-${index + 1}`} />
+          ))}
+        </span>
+      </span>
+        </div>
+  
+      
       </div>
       <div className="w-5/5 md:w-1/5 border flex flex-col gap border-solid border-[#25314640] h-full p-3  rounded-2xl">
         {" "}
